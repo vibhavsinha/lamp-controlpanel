@@ -1,0 +1,8 @@
+<glade-catalog name="lamp_controlpanel_window" domain="glade-3" 
+               depends="gtk+" version="1.0">
+  <glade-widget-classes>
+    <glade-widget-class title="Lamp Controlpanel Window" name="LampControlpanelWindow" 
+                        generic-name="LampControlpanelWindow" parent="GtkWindow"
+                        icon-name="widget-gtk-window"/>
+  </glade-widget-classes>
+</glade-catalog>

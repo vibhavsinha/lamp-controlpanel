@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Lamp Controlpanel
+_Comment=LampControlpanel application
+Categories=GNOME;Utility;
+Exec=lamp-controlpanel
+Icon=lamp-controlpanel
+Terminal=false
+Type=Application
