@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-13 04:39+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Code for other initialization actions should be added here.
+#: ../lamp-controlpanel.desktop.in.h:1
+#: ../data/ui/LampControlpanelWindow.ui.h:1
+msgid "Lamp Controlpanel"
+msgstr ""
+
+#: ../lamp-controlpanel.desktop.in.h:2
+msgid "LampControlpanel application"
+msgstr ""
+
+#: ../data/ui/PreferencesLampControlpanelDialog.ui.h:1
+msgid "Lamp Controlpanel Preferences"
+msgstr ""
+
+#: ../data/ui/PreferencesLampControlpanelDialog.ui.h:2
+msgid "_Example entry:"
+msgstr ""
+
+#: ../lamp_controlpanel/__init__.py:22
+msgid "Show debug messages (-vv debugs lamp_controlpanel_lib also)"
+msgstr ""
+
+#: ../data/ui/AboutLampControlpanelDialog.ui.h:1
+msgid ""
+"# Copyright (C) 2013 Vibhav Sinha vsinha@webdweb.com\n"
+"# This file is distributed under the license LGPL version 3 or later\n"
+msgstr ""
+
+#: ../data/ui/AboutLampControlpanelDialog.ui.h:4
+msgid "Copyright (C) 2013 Vibhav Sinha vsinha@webdweb.com"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:2
+msgid "_File"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:3
+msgid "_Edit"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:4
+msgid "_View"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:5
+msgid "_Help"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:6
+msgid "Contents"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:7
+msgid "LAMP Control Panel"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:8
+msgid "Start-up"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:9
+msgid "Services"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:10
+msgid "apache2"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:11
+msgid "Apache2"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:12
+msgid "MySQL"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:13
+msgid "FTP"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:14
+msgid "Control"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:15
+msgid "Ports"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:16
+msgid "under constructionlabel"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:17
+msgid "under construction"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:18
+msgid "Mods"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:19
+msgid "Sites"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:20
+msgid "PHP"
+msgstr ""
+
+#: ../data/ui/LampControlpanelWindow.ui.h:21
+msgid "Status Area"
+msgstr ""

@@ -1,0 +1,11 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: lamp-controlpanel
+Upstream-Contact: Vibhav Sinha <vibhavsinha91@gmail.com>
+Source: https://launchpad.net/lamp-controlpanel
+
+Files: *
+Copyright: (C) 2013 Vibhav Sinha vsinha@webdweb.com
+Copyright: (C) 2013 Vibhav Sinha vsinha@webdweb.com</property><property name="can_focus">False</property>
+License: LGPL-3
+ The full text of the GPL is distributed in
+ /usr/share/common-licenses/GPL-3 on Debian systems.
