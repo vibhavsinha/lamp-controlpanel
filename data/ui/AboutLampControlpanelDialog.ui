@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires about_lamp_controlpanel_dialog 1.0 -->
   <!-- interface-requires gtk+ 3.0 -->
   <object class="AboutLampControlpanelDialog" id="about_lamp_controlpanel_dialog">
-    <property name="can_focus">False</property>
+    <property translatable="yes" name="license"># Copyright (C) 2013 Vibhav Sinha vsinha@webdweb.com
+# This file is distributed under the license LGPL version 3 or later
+</property><property translatable="yes" name="copyright">Copyright (C) 2013 Vibhav Sinha vsinha@webdweb.com</property><property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="icon">../media/lamp-controlpanel.svg</property>
     <property name="type_hint">normal</property>
     <property name="program_name">Lamp Controlpanel</property>
-    <property name="authors"></property>
+    <property name="authors">Copyright (C) 2013 Vibhav Sinha vsinha@webdweb.com</property>
     <property name="logo">../media/lamp-controlpanel.svg</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">

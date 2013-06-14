@@ -1,4 +1,6 @@
 *.py[cod]
+.bzr
+.bzrignore
 
 # C extensions
 *.so

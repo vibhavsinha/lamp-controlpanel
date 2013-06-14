@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 ### BEGIN LICENSE
-# This file is in the public domain
+# Copyright (C) 2013 Vibhav Sinha vsinha@webdweb.com
+# This file is distributed under the license LGPL version 3 or later
 ### END LICENSE
 
 ###################### DO NOT TOUCH THIS (HEAD TO THE SECOND PART) ######################
@@ -126,12 +127,12 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 DistUtilsExtra.auto.setup(
     name='lamp-controlpanel',
     version='0.1',
-    #license='GPL-3',
-    #author='Your Name',
-    #author_email='email@ubuntu.com',
-    #description='UI for managing …',
-    #long_description='Here a longer description',
-    #url='https://launchpad.net/lamp-controlpanel',
+    license='LGPL-3',
+    author='Vibhav Sinha',
+    author_email='vibhavsinha91@gmail.com',
+    description='Gtk frontend for managing LAMP services',
+    long_description='A frontend where you can manage apache2 mysql and ftp along with configuration options.',
+    url='https://launchpad.net/lamp-controlpanel',
     cmdclass={'install': InstallAndUpdateDataDirectory}
     )
 

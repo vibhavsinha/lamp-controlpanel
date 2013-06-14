@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 ### BEGIN LICENSE
-# This file is in the public domain
+# Copyright (C) 2013 Vibhav Sinha vsinha@webdweb.com
+# This file is distributed under the license LGPL version 3 or later
 ### END LICENSE
 
 import unittest
