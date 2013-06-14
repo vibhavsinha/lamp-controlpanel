@@ -17,44 +17,48 @@ from lamp_controlpanel.PreferencesLampControlpanelDialog import PreferencesLampC
 
 # See lamp_controlpanel_lib.Window.py for more details about how this class works
 class LampControlpanelWindow(Window):
-    __gtype_name__ = "LampControlpanelWindow"
-    
-    def finish_initializing(self, builder): # pylint: disable=E1002
-        """Set up the main window"""
-        super(LampControlpanelWindow, self).finish_initializing(builder)
+	__gtype_name__ = "LampControlpanelWindow"
+	
+	def finish_initializing(self, builder): # pylint: disable=E1002
+		"""Set up the main window"""
+		super(LampControlpanelWindow, self).finish_initializing(builder)
 
-        self.AboutDialog = AboutLampControlpanelDialog
-        self.PreferencesDialog = PreferencesLampControlpanelDialog
+		self.AboutDialog = AboutLampControlpanelDialog
+		self.PreferencesDialog = PreferencesLampControlpanelDialog
 
-        # Code for other initialization actions should be added here.
-        p = Popen(['service', 'apache2', 'status'], stdout=PIPE)
-        output = p.communicate()[0] = ""
-        
-    def on_toggleaction1_toggled(self, widget, data=None):
-    	if (widget.get_active()):
-    		run_command(['gksudo', 'service', 'apache2', 'start'])
-    		self.ui.label2.set_text(p.communicate()[0])
-    	else:
-    		run_command(['gksudo', 'service', 'apache2', 'stop'])
-    		self.ui.label2.set_text(p.communicate()[0])
+		# Code for other initialization actions should be added here.
+		services = [('apache2', self.ui.toggleaction1), ('mysql', self.ui.toggleaction2)]
+		for service in services :
+			p = Popen(['service', service[0], 'status'], stdout=PIPE)
+			if 'NOT' in p.communicate()[0] :
+				pass
+			else :
+				service[1].set_active(1);
+		
+	def on_toggleaction1_toggled(self, widget, data=None):
+		if (widget.get_active()):
+			self.run_command(['gksudo', 'service', 'apache2', 'start'])
+		else:
+			self.run_command(['gksudo', 'service', 'apache2', 'stop'])
 
 
 	def on_button1_clicked(self, widget, data=None):
-    		run_command(['gksudo', 'service', 'apache2', 'restart'])
-    		label2.setText(p.communicate()[0])
+			self.run_command(['gksudo', 'service', 'apache2', 'restart'])
+			label2.setText(p.communicate()[0])
 
-    def on_toggleaction2_toggled(self, widget, data=None):
-    	if (widget.get_active()):
-    		run_command(['gksudo', 'service', 'mysql', 'start'])
-    		label2.setText(p.communicate()[0])
-    	else:
-    		run_command(['gksudo', 'service', 'mysql', 'stop'])
-    		label2.setText(p.communicate()[0])
+	def on_toggleaction2_toggled(self, widget, data=None):
+		if (widget.get_active()):
+			self.run_command(['gksudo', 'service', 'mysql', 'start'])
+		else:
+			self.run_command(['gksudo', 'service', 'mysql', 'stop'])
 
 
 	def on_button2_clicked(self, widget, data=None):
-    		run_command(['gksudo', 'service', 'mysql', 'restart'])
+			self.run_command(['gksudo', 'service', 'mysql', 'restart'])
 
-	def run_command(cmd, notify):
-		p = Popen(cmd, stdout=PIPE)
-		self.ui.label2.set_text(p.communicate()[0])
+	def run_command(item, cmd):
+		p = subprocess.Popen(cmd, stdout=PIPE)
+		item.ui.label2.set_text(p.communicate()[0])
+
+
+
