@@ -27,7 +27,7 @@ class LampControlpanelWindow(Window):
 		self.PreferencesDialog = PreferencesLampControlpanelDialog
 
 		# Code for other initialization actions should be added here.
-		services = [('apache2', self.ui.toggleaction1), ('mysql', self.ui.toggleaction2)]
+		services = [('apache2', self.ui.toggleaction1), ('mysql', self.ui.toggleaction2), ('ssh', self.ui.toggleaction3)]
 		for service in services :
 			p = Popen(['service', service[0], 'status'], stdout=PIPE)
 			if 'NOT' in p.communicate()[0] :
@@ -55,6 +55,17 @@ class LampControlpanelWindow(Window):
 
 	def on_button2_clicked(self, widget, data=None):
 			self.run_command(['gksudo', 'service', 'mysql', 'restart'])
+
+
+	def on_toggleaction3_toggled(self, widget, data=None):
+		if (widget.get_active()):
+			self.run_command(['gksudo', 'service', 'ssh', 'start'])
+		else:
+			self.run_command(['gksudo', 'service', 'ssh', 'stop'])
+
+
+	def on_button3_clicked(self, widget, data=None):
+			self.run_command(['gksudo', 'service', 'ssh', 'restart'])
 
 	def run_command(item, cmd):
 		p = subprocess.Popen(cmd, stdout=PIPE)
