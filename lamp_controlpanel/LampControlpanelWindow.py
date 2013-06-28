@@ -30,10 +30,11 @@ class LampControlpanelWindow(Window):
 		services = [('apache2', self.ui.toggleaction1), ('mysql', self.ui.toggleaction2), ('ssh', self.ui.toggleaction3)]
 		for service in services :
 			p = Popen(['service', service[0], 'status'], stdout=PIPE)
-			if 'NOT' in p.communicate()[0] :
-				pass
+			out = p.communicate()[0]
+			if 'NOT' in out or 'stop in ':
+				print out
 			else :
-				service[1].set_active(1);
+				print out + 'set it to on'
 		
 	def on_toggleaction1_toggled(self, widget, data=None):
 		if (widget.get_active()):
@@ -68,6 +69,8 @@ class LampControlpanelWindow(Window):
 			self.run_command(['gksudo', 'service', 'ssh', 'restart'])
 
 	def run_command(item, cmd):
+		for i in cmd:
+			print i
 		p = subprocess.Popen(cmd, stdout=PIPE)
 		item.ui.label2.set_text(p.communicate()[0])
 
